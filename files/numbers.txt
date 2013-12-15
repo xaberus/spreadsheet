@@ -1,0 +1,40 @@
+clear 5 5
+#set A1 0
+set B1 =mul(A1,2)
+set A2 =mul(A1,2)
+set B2 =sum(A1:A1,B1:B1,A2:A2)
+
+set C1 =mul(B1,2)
+set C2 =mul(B2,2)
+set A3 =mul(A2,2)
+set B3 =mul(B2,2)
+set C3 =sum(A1:B2,C1:C2,A3:B3)
+
+set D1 =mul(C1,2)
+set D2 =mul(C2,2)
+set D3 =mul(C3,2)
+set A4 =mul(A3,2)
+set B4 =mul(B3,2)
+set C4 =mul(C3,2)
+set D4 =sum(A1:C3,D1:D3,A4:C4)
+
+set E1 =mul(D1,2)
+set E2 =mul(D2,2)
+set E3 =mul(D3,2)
+set E4 =mul(D4,2)
+set A5 =mul(A4,2)
+set B5 =mul(B4,2)
+set C5 =mul(C4,2)
+set D5 =mul(D4,2)
+set E5 =sum(A1:D4,E1:E4,A5:D5)
+print
+
+set A1 0
+print
+
+set A1 1
+formula
+dp
+export numbers.csv
+import numbers.csv
+print

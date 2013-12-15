@@ -1,0 +1,56 @@
+digraph finite_state_machine {
+	rankdir=LR;
+	size="8,5"
+
+	node [
+		fontname = "Agfa Rotis Sans Serif"
+		fontsize = 16
+	];
+
+	z0 [shape=circle, label="start"];
+	z3 [shape=doublecircle, label="zero"];
+	z5 [shape=doublecircle, label="tail"];
+	z6 [shape=circle, label="exp"];
+	z7 [shape=doublecircle, label="etail"];
+	z8 [shape=circle, label="eneg"];
+	z4 [shape=doublecircle, label="head"];
+	z2 [shape=circle, label="dot"];
+	z1 [shape=circle, label="minus"];
+
+	z0 -> z1 [label="-"];
+	z0 -> z2 [label="."];
+	z0 -> z3 [label="0"];
+	z0 -> z4 [label="1..9"];
+
+	z1 -> z3 [label="0"];
+	z1 -> z4 [label="1..9"];
+	z1 -> z2 [label="."];
+
+	z2 -> z5 [label="0..9"];
+
+	z3 -> z5 [label="."];
+
+	z4 -> z4 [label="0..9"];
+	z4 -> z5 [label="."];
+	z4 -> z6 [label="e,E"];
+
+	z5 -> z5 [label="0..9"];
+	z5 -> z6 [label="e,E"];
+
+	z6 -> z8 [label="-"];
+	z8 -> z7 [label="1..9"]
+	z6 -> z7 [label="1..9"];
+	z7 -> z7 [label="0..9"];
+
+#	node [shape = doublecircle]; 2;
+#	node [shape = circle];
+#
+#	0 ->  1 [ label = "-" ];
+#	0 ->  2 [ label = "digit" ];
+#
+#	1 ->  2 [ label = "digit" ];
+#	1 -> -1 [ label = "-" ];
+#
+#	2 ->  2 [ label = "digit" ];
+#	2 -> -1 [ label = "-" ];
+}

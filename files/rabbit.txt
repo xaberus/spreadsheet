@@ -1,0 +1,38 @@
+clear 1 14
+set A1 = 0
+set A2 = 0
+#set A3 = sum(A1,A2)
+#set A4 = sum(A2,A3)
+#set A5 = sum(A3,A4)
+#set A6 = sum(A4,A5)
+#set A7 = sum(A5,A6)
+#set A8 = sum(A6,A7)
+#set A9 = sum(A7,A8)
+#set A10 = sum(A8,A9)
+#set A11 = sum(A9,A10)
+#set A12 = sum(A10,A11)
+#set A13 = sum(A11,A12)
+#set A14 = sum(A12,A13)
+
+set A3 = sum(A2,A1)
+set A4 = sum(A3,A2)
+set A5 = sum(A4,A3)
+set A6 = sum(A5,A4)
+set A7 = sum(A6,A5)
+set A8 = sum(A7,A6)
+set A9 = sum(A8,A7)
+set A10 = sum(A9,A8)
+set A11 = sum(A10,A9)
+set A12 = sum(A11,A10)
+set A13 = sum(A12,A11)
+set A14 = sum(A13,A12)
+
+
+formula
+#propagate
+
+set A1 = 1
+set A2 = 1
+formula
+dp
+#propagate

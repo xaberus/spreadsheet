@@ -1,0 +1,13 @@
+clear 5 5
+set A1=sum(B1)
+set B1=C1:C5
+f
+set C1=1
+set C2=1
+set C3=1
+set C4=A1
+f
+dp
+set C4=1
+f
+dp

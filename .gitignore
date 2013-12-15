@@ -16,3 +16,10 @@
 *.exe
 *.out
 *.app
+spreadsheet
+test
+deps/*
+objs/*
+
+# vim
+*.swp

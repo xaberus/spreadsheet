@@ -1,0 +1,23 @@
+e ">>> clear table"
+clear 2 4
+s A3=A2
+s A2=A1
+s A1=1
+s B1=sum(A1:A3)
+f
+dp
+
+e ">>> test update"
+s A1=500
+f
+dp
+
+e ">>> test loop"
+s A1=A3
+f
+dp
+
+e ">>> test recovery"
+s A1=500
+f
+dp

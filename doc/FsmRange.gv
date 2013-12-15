@@ -1,0 +1,27 @@
+digraph finite_state_machine {
+	rankdir=LR;
+	size="8,5"
+
+	node [
+		fontname = "Agfa Rotis Sans Serif"
+		fontsize = 16
+	];
+
+	z0 [shape=circle];
+	z1 [shape=circle];
+	z2 [shape=circle];
+
+	y0 [shape=circle];
+	y1 [shape=circle];
+	y2 [shape=doublecircle];
+
+	z0 -> z1 [label="A-Z"];
+	z1 -> z2 [label="1-9"];
+	z2 -> z2 [label="0-9"];
+
+	z2 -> y0 [label=":"];
+
+	y0 -> y1 [label="A-Z"];
+	y1 -> y2 [label="1-9"];
+	y2 -> y2 [label="0-9"];
+}
